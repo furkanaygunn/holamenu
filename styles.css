@@ -191,3 +191,57 @@ h2 {
         margin-bottom: 0;
     }
 }
+/* Footer stili */
+.all {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid #444;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.genel {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.genel img {
+    width: 100px; /* Logo boyutunu ihtiyaçlarınıza göre ayarlayın */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.baslik {
+    font-size: 1.5em;
+    margin: 10px 0;
+}
+
+.baslik a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.baslik a:hover {
+    text-decoration: underline;
+    color: #d0b49f;
+}
+
+p {
+    margin: 0;
+    font-size: 0.9em;
+}
+
+/* Responsive tasarım */
+@media (max-width: 768px) {
+    .baslik {
+        font-size: 1.2em;
+    }
+
+    .genel img {
+        width: 80px; /* Logo boyutunu küçültüyoruz */
+    }
+}
