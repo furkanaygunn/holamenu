@@ -1,0 +1,183 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e4d4c8;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    border-bottom: 1px solid #A1887F;
+    background-color: #a47551;
+    color: #FAFAFA;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.wifi {
+    font-size: 1em;
+    color: #FAFAFA;
+}
+
+.navbar {
+    background-color: #D7CCC8;
+    padding: 10px 0;
+    text-align: center;
+    border-bottom: 1px solid #A1887F;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-height: none; /* Default olarak sınırsız yükseklik */
+    overflow: visible; /* Varsayılan olarak taşma görünür */
+    transition: none; /* Default olarak geçiş yok */
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #3E2723;
+    font-weight: bold;
+    font-size: 1em;
+}
+
+.navbar ul li a:hover {
+    color: #6D4C41;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    border-bottom: 2px solid #3E2723;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #3E2723;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #d0b49f;
+    border: 1px solid #A1887F;
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+    text-align: center;
+}
+
+.menu-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.menu-item-details {
+    max-width: 600px;
+    width: 100%;
+}
+
+.menu-item-details h3 {
+    margin: 0;
+    font-size: 1.2em;
+    color: #3E2723;
+}
+
+.menu-item-details p {
+    margin: 5px 0;
+    font-size: 0.9em;
+    color: #5D4037;
+}
+
+.menu-item-details .price {
+    font-weight: bold;
+    color: #3E2723;
+    font-size: 1.1em;
+}
+
+/* Hamburger menu icon styling */
+.hamburger-menu {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color: #FAFAFA;
+    cursor: pointer;
+}
+
+/* Responsive navbar */
+@media (max-width: 768px) {
+    .navbar ul {
+        flex-direction: column;
+        max-height: 0; /* İlk başta gizli */
+        overflow: hidden; /* Taşan içerik gizli */
+        transition: max-height 0.3s ease-in-out; /* Geçişli açılma efekti */
+    }
+    
+    .navbar ul.show {
+        max-height: 500px; /* Açıldığında maksimum yükseklik */
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin: 5px 0;
+        padding: 10px;
+        border: 1px solid #A1887F; /* Telefon boyutunda border eklenir */
+    }
+
+    .hamburger-menu {
+        display: block;
+    }
+}
+
+@media (min-width: 769px) {
+    .navbar ul {
+        display: flex; /* PC versiyonunda flexbox ile hizalanır */
+        max-height: none; /* Yükseklik kısıtlaması yok */
+        overflow: visible; /* Taşma görünür */
+        transition: none; /* Geçiş efekti yok */
+    }
+
+    .navbar ul li {
+        margin: 0 15px;
+        border: none; /* PC versiyonunda border yok */
+    }
+    
+    .hamburger-menu {
+        display: none; /* PC versiyonunda hamburger menü gizli */
+    }
+}
+
+@media (min-width: 768px) {
+    .menu-item {
+        flex-direction: row;
+        text-align: left;
+    }
+    
+    .menu-item img {
+        margin-right: 20px;
+        margin-bottom: 0;
+    }
+}
