@@ -12,7 +12,7 @@ header {
     padding: 10px 20px;
     border-bottom: 1px solid #A1887F;
     background-color: #a47551;
-    color: #FAFAFA;
+    color: #e4d4c8;
 }
 
 .logo {
@@ -71,6 +71,7 @@ h2 {
     padding-bottom: 5px;
     margin-bottom: 20px;
     color: #3E2723;
+    text-align: center;
 }
 
 .menu-item {
@@ -138,13 +139,14 @@ h2 {
         max-height: 500px; /* Açıldığında maksimum yükseklik */
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 10px;
+        gap: 5px;
     }
 
     .navbar ul li {
         margin: 5px 0;
         padding: 10px;
         border: 1px solid #A1887F; /* Telefon boyutunda border eklenir */
+        border-radius: 10px;
     }
 
     .hamburger-menu {
@@ -158,6 +160,14 @@ h2 {
         max-height: none; /* Yükseklik kısıtlaması yok */
         overflow: visible; /* Taşma görünür */
         transition: none; /* Geçiş efekti yok */
+    }
+
+    .menu-item {
+        justify-content: center;
+        width: 40%;
+        align-items: center;
+        text-align: center;
+        margin: 10px auto;
     }
 
     .navbar ul li {
